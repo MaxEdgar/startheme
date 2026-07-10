@@ -1,0 +1,35 @@
+# Theme: paper
+# Author: startheme
+# Built for light-background terminals. Dark text, high contrast,
+# no powerline blocks that assume a dark background.
+
+format = """
+$username\
+$directory \
+$git_branch\
+$git_status\
+$line_break$character
+"""
+
+[username]
+show_always = true
+style_user = "bold #2c3e50"
+format = "[$user]($style) "
+
+[directory]
+style = "bold #34495e"
+format = "[$path]($style)"
+truncation_length = 4
+truncate_to_repo = true
+
+[git_branch]
+style = "#7d5a50"
+format = "on [$symbol$branch]($style) "
+
+[git_status]
+style = "#a94442"
+format = "[$all_status$ahead_behind]($style) "
+
+[character]
+success_symbol = "[>](bold #2c3e50)"
+error_symbol = "[x](bold #a94442)"

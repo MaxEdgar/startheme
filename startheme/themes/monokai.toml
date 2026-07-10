@@ -1,0 +1,38 @@
+# Theme: monokai
+# Author: startheme
+# High-contrast, vibrant, editor-inspired. Single line.
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$python\
+$line_break$character
+"""
+
+[directory]
+style = "bold #66d9ef"
+format = "[$path]($style) "
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+style = "#a6e22e"
+format = "on [$symbol$branch]($style) "
+
+[git_status]
+style = "#f92672"
+format = "[$all_status$ahead_behind]($style) "
+
+[nodejs]
+style = "#fd971f"
+format = "via [$symbol($version)]($style) "
+
+[python]
+style = "#e6db74"
+format = "via [$symbol($version)]($style) "
+
+[character]
+success_symbol = "[>](bold #a6e22e)"
+error_symbol = "[x](bold #f92672)"

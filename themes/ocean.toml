@@ -1,0 +1,39 @@
+# Theme: ocean
+# Author: startheme
+# Calm blues and teals. Single line, generous spacing.
+
+format = """
+$username\
+$directory \
+$git_branch\
+$git_status\
+$nodejs\
+$line_break$character
+"""
+
+[username]
+show_always = true
+style_user = "bold #4a90a4"
+format = "[$user]($style) "
+
+[directory]
+style = "bold #2e5266"
+format = "[$path]($style)"
+truncation_length = 4
+truncate_to_repo = true
+
+[git_branch]
+style = "#5fa8a0"
+format = "on [$symbol$branch]($style) "
+
+[git_status]
+style = "#c94c4c"
+format = "[$all_status$ahead_behind]($style) "
+
+[nodejs]
+style = "#79b8b0"
+format = "via [$symbol($version)]($style) "
+
+[character]
+success_symbol = "[>](bold #5fa8a0)"
+error_symbol = "[x](bold #c94c4c)"

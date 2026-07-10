@@ -1,0 +1,38 @@
+# Theme: synthwave
+# Author: startheme
+# Retro-futuristic: magenta, cyan, purple. Segmented layout.
+
+format = """
+[](#ff2a6d)\
+$username\
+[](bg:#d1004b fg:#ff2a6d)\
+$directory\
+[](fg:#d1004b bg:#01012b)\
+$git_branch\
+$git_status\
+[](fg:#01012b)\
+$line_break$character
+"""
+
+[username]
+show_always = true
+style_user = "bg:#ff2a6d fg:#f5f5f5"
+format = "[ $user ]($style)"
+
+[directory]
+style = "bg:#d1004b fg:#f5f5f5"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+style = "bg:#01012b fg:#05d9e8"
+format = "[ $symbol$branch ]($style)"
+
+[git_status]
+style = "bg:#01012b fg:#ff2a6d"
+format = "[$all_status$ahead_behind ]($style)"
+
+[character]
+success_symbol = "[>](bold #05d9e8)"
+error_symbol = "[x](bold #ff2a6d)"

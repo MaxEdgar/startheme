@@ -1,0 +1,4 @@
+name = "terminal-classic"
+author = "startheme"
+description = "CRT green sparse prompt, closest thing to a retro terminal"
+tags = ["retro", "green", "sparse"]

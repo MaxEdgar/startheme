@@ -1,0 +1,45 @@
+# Theme: dracula
+# Author: startheme
+# The Dracula color scheme. Two-line layout: context on line one,
+# input on line two.
+
+format = """
+[](#bd93f9)\
+$username\
+[](bg:#44475a fg:#bd93f9)\
+$directory\
+[](fg:#44475a bg:#282a36)\
+$git_branch\
+$git_status\
+$nodejs\
+$python\
+[](fg:#282a36)\
+$line_break$character
+"""
+
+[username]
+show_always = true
+style_user = "bg:#bd93f9 fg:#282a36"
+format = "[ $user ]($style)"
+
+[directory]
+style = "bg:#44475a fg:#f8f8f2"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+style = "bg:#282a36 fg:#50fa7b"
+format = "[ $symbol$branch ]($style)"
+
+[git_status]
+style = "bg:#282a36 fg:#ff79c6"
+format = "[$all_status$ahead_behind ]($style)"
+
+[nodejs]
+style = "bg:#282a36 fg:#8be9fd"
+format = "[ $symbol($version) ]($style)"
+
+[character]
+success_symbol = "[>](bold #50fa7b)"
+error_symbol = "[x](bold #ff5555)"

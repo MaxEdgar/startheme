@@ -1,0 +1,28 @@
+# Theme: matrix
+# Author: startheme
+# Green-on-black, terminal-of-the-90s. Deliberately sparse.
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$line_break$character
+"""
+
+[directory]
+style = "bold #00ff41"
+format = "[$path]($style) "
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+style = "#00cc33"
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "bold #00ff41"
+format = "[$all_status$ahead_behind]($style) "
+
+[character]
+success_symbol = "[$](bold #00ff41)"
+error_symbol = "[$](bold #ff0000)"

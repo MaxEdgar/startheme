@@ -1,0 +1,53 @@
+# Theme: cute
+# Author: startheme
+# A soft pastel pink developer theme (no emoji, plain Nerd Font
+# powerline glyphs only, so it renders correctly everywhere).
+
+format = """
+[░▒▓](#f5c2e7)\
+$os\
+$username\
+[](bg:#cba6f7 fg:#f5c2e7)\
+$directory\
+[](fg:#cba6f7 bg:#89b4fa)\
+$git_branch\
+$git_status\
+[](fg:#89b4fa bg:#a6e3a1)\
+$nodejs\
+$rust\
+$python\
+[](fg:#a6e3a1)\
+$line_break$character
+"""
+
+[os]
+disabled = false
+style = "bg:#f5c2e7 fg:#1e1e2e"
+
+[username]
+show_always = true
+style_user = "bg:#f5c2e7 fg:#1e1e2e"
+style_root = "bg:#f5c2e7 fg:#f38ba8"
+format = "[ $user ]($style)"
+
+[directory]
+style = "bg:#cba6f7 fg:#1e1e2e"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+style = "bg:#89b4fa fg:#1e1e2e"
+format = "[ $symbol$branch ]($style)"
+
+[git_status]
+style = "bg:#89b4fa fg:#1e1e2e"
+format = "[$all_status$ahead_behind ]($style)"
+
+[nodejs]
+style = "bg:#a6e3a1 fg:#1e1e2e"
+format = "[ $symbol($version) ]($style)"
+
+[character]
+success_symbol = "[>](bold pink)"
+error_symbol = "[x](bold red)"

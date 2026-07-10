@@ -1,0 +1,72 @@
+# Theme: powerline-pro
+# Author: startheme
+# Full segmented layout with every common module wired up. For people
+# who want maximum information, not minimalism.
+
+format = """
+[](#3c3836)\
+$os\
+$username\
+[](bg:#665c54 fg:#3c3836)\
+$directory\
+[](fg:#665c54 bg:#458588)\
+$git_branch\
+$git_status\
+[](fg:#458588 bg:#98971a)\
+$nodejs\
+$rust\
+$python\
+$golang\
+[](fg:#98971a bg:#d79921)\
+$cmd_duration\
+[](fg:#d79921)\
+$line_break$character
+"""
+
+[os]
+disabled = false
+style = "bg:#3c3836 fg:#ebdbb2"
+
+[username]
+show_always = true
+style_user = "bg:#3c3836 fg:#ebdbb2"
+format = "[ $user ]($style)"
+
+[directory]
+style = "bg:#665c54 fg:#ebdbb2"
+format = "[ $path ]($style)"
+truncation_length = 4
+truncate_to_repo = true
+
+[git_branch]
+style = "bg:#458588 fg:#282828"
+format = "[ $symbol$branch ]($style)"
+
+[git_status]
+style = "bg:#458588 fg:#fb4934"
+format = "[$all_status$ahead_behind ]($style)"
+
+[nodejs]
+style = "bg:#98971a fg:#282828"
+format = "[ $symbol($version) ]($style)"
+
+[rust]
+style = "bg:#98971a fg:#282828"
+format = "[ $symbol($version) ]($style)"
+
+[python]
+style = "bg:#98971a fg:#282828"
+format = "[ $symbol($version) ]($style)"
+
+[golang]
+style = "bg:#98971a fg:#282828"
+format = "[ $symbol($version) ]($style)"
+
+[cmd_duration]
+min_time = 500
+style = "bg:#d79921 fg:#282828"
+format = "[ $duration ]($style)"
+
+[character]
+success_symbol = "[>](bold #98971a)"
+error_symbol = "[x](bold #fb4934)"

@@ -1,0 +1,38 @@
+# Theme: forest
+# Author: startheme
+# Earthy greens and browns. Segmented, warm.
+
+format = """
+[](#4a6741)\
+$username\
+[](bg:#7c9473 fg:#4a6741)\
+$directory\
+[](fg:#7c9473 bg:#3e3629)\
+$git_branch\
+$git_status\
+[](fg:#3e3629)\
+$line_break$character
+"""
+
+[username]
+show_always = true
+style_user = "bg:#4a6741 fg:#f2ead3"
+format = "[ $user ]($style)"
+
+[directory]
+style = "bg:#7c9473 fg:#2e2a21"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+style = "bg:#3e3629 fg:#a8c090"
+format = "[ $symbol$branch ]($style)"
+
+[git_status]
+style = "bg:#3e3629 fg:#c97c5d"
+format = "[$all_status$ahead_behind ]($style)"
+
+[character]
+success_symbol = "[>](bold #a8c090)"
+error_symbol = "[x](bold #c97c5d)"

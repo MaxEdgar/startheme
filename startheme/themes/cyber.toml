@@ -1,0 +1,52 @@
+# Theme: cyber
+# Author: startheme
+# A dark, hacker-inspired theme with neon accents.
+
+format = """
+[░▒▓](#0a0a0a)\
+$os\
+$username\
+[](bg:#1a1a2e fg:#0a0a0a)\
+$directory\
+[](fg:#1a1a2e bg:#16213e)\
+$git_branch\
+$git_status\
+[](fg:#16213e bg:#0f3460)\
+$nodejs\
+$rust\
+$python\
+[](fg:#0f3460)\
+$line_break$character
+"""
+
+[os]
+disabled = false
+style = "bg:#0a0a0a fg:#00ff9f"
+
+[username]
+show_always = true
+style_user = "bg:#0a0a0a fg:#00ff9f"
+style_root = "bg:#0a0a0a fg:#ff003c"
+format = "[ >_ $user ]($style)"
+
+[directory]
+style = "bg:#1a1a2e fg:#00ff9f"
+format = "[ $path ]($style)"
+truncation_length = 4
+truncate_to_repo = true
+
+[git_branch]
+style = "bg:#16213e fg:#00ff9f"
+format = "[ ⎇ $symbol$branch ]($style)"
+
+[git_status]
+style = "bg:#16213e fg:#ff003c"
+format = "[$all_status$ahead_behind ]($style)"
+
+[rust]
+style = "bg:#0f3460 fg:#00ff9f"
+format = "[ $symbol($version) ]($style)"
+
+[character]
+success_symbol = "[▶](bold #00ff9f)"
+error_symbol = "[▶](bold #ff003c)"

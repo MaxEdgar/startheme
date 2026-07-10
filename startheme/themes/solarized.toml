@@ -1,0 +1,34 @@
+# Theme: solarized
+# Author: startheme
+# Classic Solarized Dark. Muted, low-glare, built for long sessions.
+
+format = """
+$username\
+$directory \
+$git_branch\
+$git_status\
+$line_break$character
+"""
+
+[username]
+show_always = true
+style_user = "bold #b58900"
+format = "[$user]($style) "
+
+[directory]
+style = "bold #268bd2"
+format = "[$path]($style)"
+truncation_length = 4
+truncate_to_repo = true
+
+[git_branch]
+style = "#2aa198"
+format = "on [$symbol$branch]($style) "
+
+[git_status]
+style = "#dc322f"
+format = "[$all_status$ahead_behind]($style) "
+
+[character]
+success_symbol = "[>](bold #859900)"
+error_symbol = "[x](bold #dc322f)"

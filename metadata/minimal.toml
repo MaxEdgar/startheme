@@ -1,0 +1,4 @@
+name = "minimal"
+author = "startheme"
+description = "No backgrounds or separators, just clean color and spacing"
+tags = ["minimal", "clean", "no-powerline"]

@@ -1,0 +1,45 @@
+# Theme: professional
+# Author: startheme
+# A clean, minimal theme suitable for enterprise environments.
+
+format = """
+$os\
+$username\
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$rust\
+$python\
+$line_break$character
+"""
+
+[os]
+disabled = true
+
+[username]
+show_always = false
+style_user = "bold #4a4a4a"
+format = "[$user]($style) "
+
+[directory]
+style = "bold #2c3e50"
+format = "[$path]($style) "
+truncation_length = 4
+truncate_to_repo = true
+
+[git_branch]
+style = "#7f8c8d"
+format = "[on $symbol$branch]($style) "
+
+[git_status]
+style = "#c0392b"
+format = "[$all_status$ahead_behind]($style) "
+
+[nodejs]
+style = "#27ae60"
+format = "[$symbol($version)]($style) "
+
+[character]
+success_symbol = "[>](bold #2c3e50)"
+error_symbol = "[x](bold #c0392b)"

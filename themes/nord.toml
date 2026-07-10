@@ -1,0 +1,38 @@
+# Theme: nord
+# Author: startheme
+# The Nord color scheme, arctic and understated. Segmented layout.
+
+format = """
+[](#5e81ac)\
+$username\
+[](bg:#4c566a fg:#5e81ac)\
+$directory\
+[](fg:#4c566a bg:#3b4252)\
+$git_branch\
+$git_status\
+[](fg:#3b4252)\
+$line_break$character
+"""
+
+[username]
+show_always = true
+style_user = "bg:#5e81ac fg:#eceff4"
+format = "[ $user ]($style)"
+
+[directory]
+style = "bg:#4c566a fg:#eceff4"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+style = "bg:#3b4252 fg:#88c0d0"
+format = "[ $symbol$branch ]($style)"
+
+[git_status]
+style = "bg:#3b4252 fg:#bf616a"
+format = "[$all_status$ahead_behind ]($style)"
+
+[character]
+success_symbol = "[>](bold #a3be8c)"
+error_symbol = "[x](bold #bf616a)"

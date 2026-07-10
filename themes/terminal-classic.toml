@@ -1,0 +1,17 @@
+# Theme: terminal-classic
+# Author: startheme
+# CRT-green sparse prompt. As close to a 1980s terminal as Starship
+# reasonably gets.
+
+format = """
+$directory$character"""
+
+[directory]
+style = "bold #33ff33"
+format = "[$path]($style) "
+truncation_length = 2
+truncate_to_repo = true
+
+[character]
+success_symbol = "[$](bold #33ff33)"
+error_symbol = "[$](bold #ff3333)"

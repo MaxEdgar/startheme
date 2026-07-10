@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "startheme"
+version = "0.2.0"
+description = "A theme manager for the Starship prompt, with a text-based interface"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "startheme contributors" }]
+keywords = ["starship", "prompt", "cli", "tui", "themes", "terminal"]
+classifiers = [
+    "Environment :: Console",
+    "Environment :: Console :: Curses",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Topic :: Terminals",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "requests>=2.31",
+    "textual>=0.58",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "responses>=0.25",
+    "toml>=0.10",
+]
+
+[project.scripts]
+startheme = "startheme.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/MaxEdgar/startheme"
+Repository = "https://github.com/MaxEdgar/startheme"
+Issues = "https://github.com/MaxEdgar/startheme/issues"
+
+[tool.setuptools.packages.find]
+include = ["startheme*"]
+
+[tool.setuptools.package-data]
+startheme = ["metadata/*.toml", "themes/*.toml"]

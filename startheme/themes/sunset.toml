@@ -1,0 +1,38 @@
+# Theme: sunset
+# Author: startheme
+# Warm orange-to-pink gradient feel across segments.
+
+format = """
+[](#ff6b6b)\
+$username\
+[](bg:#ff9f6b fg:#ff6b6b)\
+$directory\
+[](fg:#ff9f6b bg:#ffd56b)\
+$git_branch\
+$git_status\
+[](fg:#ffd56b)\
+$line_break$character
+"""
+
+[username]
+show_always = true
+style_user = "bg:#ff6b6b fg:#2b1b1b"
+format = "[ $user ]($style)"
+
+[directory]
+style = "bg:#ff9f6b fg:#2b1b1b"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+style = "bg:#ffd56b fg:#2b1b1b"
+format = "[ $symbol$branch ]($style)"
+
+[git_status]
+style = "bg:#ffd56b fg:#c0392b"
+format = "[$all_status$ahead_behind ]($style)"
+
+[character]
+success_symbol = "[>](bold #ff6b6b)"
+error_symbol = "[x](bold #c0392b)"

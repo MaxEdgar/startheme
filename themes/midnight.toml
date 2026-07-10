@@ -1,0 +1,28 @@
+# Theme: midnight
+# Author: startheme
+# Near-monochrome, understated. For people who want almost nothing.
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$line_break$character
+"""
+
+[directory]
+style = "bold #d8d8d8"
+format = "[$path]($style) "
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+style = "#8a8a8a"
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "#8a8a8a"
+format = "[$all_status$ahead_behind]($style) "
+
+[character]
+success_symbol = "[>](bold #d8d8d8)"
+error_symbol = "[>](bold #5a5a5a)"

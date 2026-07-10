@@ -1,0 +1,35 @@
+# Theme: tokyonight
+# Author: startheme
+# Deep blues and purples. Command duration shown at the end, like a
+# right-prompt, without needing Starship's separate right_format.
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$cmd_duration\
+$line_break$character
+"""
+
+[directory]
+style = "bold #7aa2f7"
+format = "[$path]($style) "
+truncation_length = 4
+truncate_to_repo = true
+
+[git_branch]
+style = "#bb9af7"
+format = "on [$symbol$branch]($style) "
+
+[git_status]
+style = "#f7768e"
+format = "[$all_status$ahead_behind]($style) "
+
+[cmd_duration]
+min_time = 500
+style = "#9ece6a"
+format = "took [$duration]($style) "
+
+[character]
+success_symbol = "[>](bold #9ece6a)"
+error_symbol = "[x](bold #f7768e)"
